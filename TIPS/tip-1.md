@@ -39,7 +39,7 @@ This element defines the REST API call that is used to retrieve the data for the
                 url="https://my.api/some/${path}?params=${canComeFromAttributes}"
                 as="json"
                 bodyFormat="json">
-            <ts:body ref="myAttribute.level"/>
+            <ts:body ref="myAttribute"/>
         </ts:api>
     </ts:origins>
 </ts:attribute>
@@ -57,7 +57,7 @@ The `ts:api` element contains a few attributes that control its behavior:
 ### ts:body
 
 Each `ts:api` element can optionally contain a single `ts:body` element.
-The design of this element is borrowed from [Referential Attributes](https://sln-doc.vercel.app/framework/tokenscript-syntax/attributes#referenceAttributes) 
+The design of this element is borrowed from [Reference Attributes](https://sln-doc.vercel.app/framework/tokenscript-syntax/attributes#referenceAttributes) 
 which can reference nested values of complex attributes using a dot notation. You can see this in the previous example.
 
 In this example, we see how we can draw on values from multiple attributes in a single request. 
