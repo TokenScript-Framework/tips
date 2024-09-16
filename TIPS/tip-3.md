@@ -73,10 +73,10 @@ A set of bundled TokenScript cards might look like this:
 </ts:cards>
 ```
 
-An alternative pattern would be to treat a these additional cards as a completely different TokenScript instance.
-i.e. `tokenScript.getBundledTokenScriptInstance() => TokenScript`
-The bundled cards from this separate instance can be merged with the current instance and displayed in the UI with minimal  
-changes to the code and no changes to the XML schema.
+An alternative pattern would be to treat a these additional cards as a completely different TokenScript instance.  
+i.e. `tokenScript.getBundledTokenScriptInstance() => TokenScript`  
+The bundled cards from this separate instance can be merged with the current instance and displayed in the UI with 
+minimal changes to the code and no changes to the XML schema.
 
 This may be a better approach as it requires additional research to determine the best method.
 
@@ -110,4 +110,12 @@ When a token fails to resolve a TokenScript for itself, we provide a small XML s
 
 ## Considerations
 
+The main consideration mentioned above is how to implement these features in a way that:
+
+- Limits the changes to TS Engine logic and the XML schema
+- Does not create additional requirements for external tools such as TokenScript CLI that will be used to build these bundled cards.
+
 ## Summary
+
+This EIP represents an easy way for us to enable common token features for every single token, on every single chain  
+in a way that is transparent to the user and customisable for the TokenScript developer.
