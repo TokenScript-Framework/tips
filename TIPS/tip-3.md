@@ -114,6 +114,7 @@ The main consideration mentioned above is how to implement these features in a w
 
 - Limits the changes to TS Engine logic and the XML schema
 - Does not create additional requirements for external tools such as TokenScript CLI that will be used to build these bundled cards.
+- Info & Transfer card should be used as a PoC in order to drive the implementation, as they are already available as TokenScript templates.
 
 ## Summary
 
