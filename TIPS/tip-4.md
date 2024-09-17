@@ -50,7 +50,7 @@ They call themselves logic-less templates however they do provide conditional an
 One advantage of a templating languages like this is that they do not impose any sandboxing requirements, unlike some 
 other general programming language based solution.
 
-### Defining an image renderered card
+### Defining an image rendered card
 
 To define a mustache rendered card, we introduce the renderer attribute to the `ts:view` element. 
 `renderer="image"` declares that we want to render this view as an image and `templateFormat="mustache"` indicates 
@@ -89,8 +89,10 @@ The output of a content would look something like this:
 
 ### Engine integration
 
-The existing ViewController model of the engine is changed to enable the image based rendering model. 
-It is based on the current IViewBinding interface, which leaves the actual implementation to the user-agent (TS viewer, API server, etc.). 
+The existing [ViewController](https://github.com/SmartTokenLabs/tokenscript-engine/blob/master/javascript/engine-js/src/view/ViewController.ts) 
+model of the engine is changed to enable the image based rendering model. 
+It is based on the current [IViewBinding](https://github.com/SmartTokenLabs/tokenscript-engine/blob/master/javascript/engine-js/src/view/IViewBinding.ts) 
+interface, which leaves the actual implementation to the user-agent (TS viewer, API server, etc.). 
 Where possible the same controller APIs are reused and modified to make cross-compatible with the new rendering model. 
 
 ### View rendering
